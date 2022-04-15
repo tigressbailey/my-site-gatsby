@@ -61,7 +61,7 @@ if test -s /etc/nginx/nginx.conf; then
   sed -i "s/localhost/$your_domain/;" /etc/nginx/nginx.conf
 	green " "
 	green "================================="
-	 blue "    开始下载伪装站点源码并部署"
+	 blue "    开始下载站点源码并部署"
 	green "================================="
 	sleep 2s
 	rm -rf /usr/share/nginx/html/*
@@ -85,7 +85,7 @@ if test -s /etc/nginx/nginx.conf; then
   green " "
 	green "=================================================================="
 	green " "
-	 blue "  伪装站点目录 /usr/share/nginx/html "
+	 blue " 站点目录 /usr/share/nginx/html "
 	 blue "  面板管理地址 http://$your_domain:8000 "
 	green "=================================================================="
 else
@@ -119,10 +119,10 @@ start_menu(){
 	green "=========================================================="
    blue " 支持：Debian9+ / Ubuntu16+ / Centos7+"
 	green "=========================================================="
-   blue " 简介：一键更改 Trojan-Panel 面板端口并设置伪装站点"
+   blue " 简介：一键更改 Trojan-Panel 面板端口并设置站点"
 	green "=========================================================="
 	 blue " 1. Jrohy大神的 Trojan 多用户管理部署程序"
-   blue " 2. 更改 Trojan 面板端口并设置伪装站点"
+   blue " 2. 更改 Trojan 面板端口并设置站点"
    blue " 3. 安装 BBRPlus4 合一加速"
    blue " 0. 退出脚本"
     echo
