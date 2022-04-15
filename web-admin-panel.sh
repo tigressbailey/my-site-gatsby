@@ -53,7 +53,7 @@ if test -s /etc/systemd/system/trojan-web.service; then
 	systemctl stop nginx
 if test -s /etc/nginx/nginx.conf; then
 	rm -rf /etc/nginx/nginx.conf
-  wget -P /etc/nginx https://raw.githubusercontent.com/tigressbailey/my-site-gatsby/master/master/nginx.conf
+  wget -P /etc/nginx https://raw.githubusercontent.com/tigressbailey/my-site-gatsby/master/nginx.conf
 	green "================================="
 	blue "     请输入Trojan绑定的域名"
 	green "================================="
