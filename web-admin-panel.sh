@@ -108,7 +108,12 @@ fi
 
 bbr_boost_sh(){
     $systemPackage install -y wget
-    wget -N --no-check-certificate -q -O tcp.sh "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && bash tcp.sh
+    wget -N --no-check-certificate "https://github.000060000.xyz/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
+    #wget -N --no-check-certificate -q -O tcp.sh "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && bash tcp.sh
+}
+
+bbr_config_sh(){
+    bash <(curl -Ls https://github.com/lanziii/bbr-/releases/download/123/tools.sh)
 }
 
 trojan_install(){
@@ -125,7 +130,8 @@ start_menu(){
 	green "=========================================================="
 	 blue " 1. Jrohy大神的 Trojan 多用户管理部署程序"
    blue " 2. 更改 Trojan 面板端口并设置站点"
-   blue " 3. 安装 BBRPlus4 合一加速"
+   blue " 3. 安装BBR 最新内核和规则"
+	 blue " 4. 规则优化"
    blue " 0. 退出脚本"
     echo
     read -p "请输入数字:" num
@@ -138,6 +144,9 @@ start_menu(){
 		;;
 		3)
 		bbr_boost_sh
+		;;
+		4)
+		bbr_config_sh
 		;;
 		0)
 		exit 0
