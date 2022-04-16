@@ -68,8 +68,10 @@ if test -s /etc/nginx/nginx.conf; then
 	cd /usr/share/nginx/
 	# wget https://github.com/V2RaySSR/Trojan/raw/master/web.zip
 	# unzip web.zip
+	rm -rf quick-free-bootstrap-them
   git clone https://github.com/webpixels/quick-free-bootstrap-theme.git
   cp -avr quick-free-bootstrap-theme/src/ /usr/share/nginx/html/
+	cp -avr html/src/* html
 	green " "
 	green "================================="
 	blue "       开始配置trojan-web"
